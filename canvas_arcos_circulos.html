@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graficas 2d Javascript</title>
+<style>
+    html{
+        height: 100vh;
+    }
+    body{
+        height: 100vh;
+    }
+   #canvas-container 
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+   #miCanvas
+    {
+        border: dotted 5px blueviolet;
+        background-color: rgb(206, 206, 132);
+    }
+</style>
+<script>
+    window.onload = function()
+    {
+        var canvas = document.getElementById("miCanvas");
+        
+        const BASE = 500;
+        const ALTURA = 300;
+
+        canvas.width = BASE;
+        canvas.heigth = ALTURA;
+        
+        if(canvas && canvas.getContext)
+        {
+            var ctx = canvas.getContext("2d");
+
+            if(ctx)
+            {
+                //alert("Bienvenido al canvas")
+                // Aqui vamos a graficar
+
+                //Caracteristicas de las lineas
+                ctx.lineWidth = 0;
+                ctx.strokeStyle = "blue";
+                ctx.fillStyle = "white";
+
+                  // arco 1
+                  ctx.strokeStyle = "white";
+                ctx.lineWidth = 5;
+                ctx.beginPath();
+                ctx.arc(100,150,50,0,2*Math.PI, false)
+                ctx.fill();
+               ctx.stroke();
+
+               // centro arco 1
+               ctx.lineWidth = 1;
+               ctx.strokeStyle = "black";
+               ctx.beginPath();
+               ctx.moveTo(100,0);
+               ctx.lineTo(100,ALTURA)
+               ctx.stroke();
+
+                   // arco 2
+                   ctx.strokeStyle = "white";
+                ctx.lineWidth = 5;
+                ctx.beginPath();
+                ctx.arc(200,150,50,0,2*Math.PI, false)
+                ctx.fill();
+               ctx.stroke();
+
+               // centro arco 2
+               ctx.lineWidth = 1;
+               ctx.strokeStyle = "black";
+               ctx.beginPath();
+               ctx.moveTo(200,0);
+               ctx.lineTo(200,ALTURA)
+               ctx.stroke();
+
+
+                  // arco 3
+                ctx.strokeStyle = "white";
+                ctx.lineWidth = 5;
+                ctx.beginPath();
+                ctx.arc(300,150,50,0,2*Math.PI, false)
+                ctx.fill();
+               ctx.stroke();
+
+               // centro arco 3
+               ctx.lineWidth = 1;
+               ctx.strokeStyle = "black";
+               ctx.beginPath();
+               ctx.moveTo(300,0);
+               ctx.lineTo(300,ALTURA)
+               ctx.stroke();
+
+                  // arco 4
+                  ctx.strokeStyle = "blue";
+                ctx.lineWidth = 5;
+                ctx.beginPath();
+                ctx.arc(400,150,50,0,2*Math.PI, false)
+                ctx.fill();
+               ctx.stroke();
+
+               // centro arco 4
+               ctx.lineWidth = 1;
+               ctx.strokeStyle = "black";
+               ctx.beginPath();
+               ctx.moveTo(400,0);
+               ctx.lineTo(400,ALTURA)
+               ctx.stroke();
+
+                 // arco 5
+                 ctx.strokeStyle = "black";
+                ctx.lineWidth = 5;
+                ctx.beginPath();
+                ctx.arc(380,140,5,0,2*Math.PI, false)
+                ctx.fill();
+               ctx.stroke();
+
+               // centro arco 5
+               ctx.lineWidth = 1;
+               ctx.strokeStyle = "black";
+               ctx.beginPath();
+               ctx.moveTo(400,0);
+               ctx.lineTo(400,ALTURA)
+               ctx.stroke();
+
+                 // arco 6
+                 ctx.strokeStyle = "black";
+                ctx.lineWidth = 5;
+                ctx.beginPath();
+                ctx.arc(420,140,5,0,2*Math.PI, false)
+                ctx.fill();
+               ctx.stroke();
+
+               // centro arco 6
+               ctx.lineWidth = 1;
+               ctx.strokeStyle = "black";
+               ctx.beginPath();
+               ctx.moveTo(400,0);
+               ctx.lineTo(400,ALTURA)
+               ctx.stroke();
+
+                 // arco 7
+                 ctx.strokeStyle = "black";
+                ctx.lineWidth = 5;
+                ctx.beginPath();
+                ctx.arc(100,200,10,0,2*Math.PI, false)
+                ctx.fill();
+               ctx.stroke();
+
+               // centro arco 7
+               ctx.lineWidth = 1;
+               ctx.strokeStyle = "black";
+               ctx.beginPath();
+               ctx.moveTo(100,0);
+               ctx.lineTo(100,ALTURA)
+               ctx.stroke();
+
+                // arco 8
+                 ctx.strokeStyle = "black";
+                ctx.lineWidth = 5;
+                ctx.beginPath();
+                ctx.arc(200,200,10,0,2*Math.PI, false)
+                ctx.fill();
+               ctx.stroke();
+
+               // centro arco 8
+               ctx.lineWidth = 1;
+               ctx.strokeStyle = "black";
+               ctx.beginPath();
+               ctx.moveTo(100,0);
+               ctx.lineTo(100,ALTURA)
+               ctx.stroke();
+
+               // arco 9
+               ctx.strokeStyle = "black";
+                ctx.lineWidth = 5;
+                ctx.beginPath();
+                ctx.arc(300,200,10,0,2*Math.PI, false)
+                ctx.fill();
+               ctx.stroke();
+
+               // centro arco 9
+               ctx.lineWidth = 1;
+               ctx.strokeStyle = "black";
+               ctx.beginPath();
+               ctx.moveTo(100,0);
+               ctx.lineTo(100,ALTURA)
+               ctx.stroke();
+
+                // arco 10
+                ctx.beginPath();
+                ctx.arc(400,160,10,Math.PI, 2*Math.PI, true)
+                ctx.fill();
+               ctx.stroke();
+
+               // centro arco 10
+               ctx.lineWidth = 1;
+               ctx.strokeStyle = "black";
+               ctx.beginPath();
+               ctx.moveTo(300,0);
+               ctx.lineTo(300,ALTURA)
+               ctx.stroke();
+
+
+                 // linea horizontal centro circulos
+                 ctx.lineWidth = 1;
+               ctx.strokeStyle = "black";
+               ctx.beginPath();
+               ctx.moveTo(0,150);
+               ctx.lineTo(BASE,150);
+               ctx.stroke();
+
+            }
+            else
+            {
+                alert("Error al crear el contexto")
+            }
+        }
+    }
+
+</script>
+
+
+</head>
+<body>
+    <h1>Graficas 2D con HTML y Javascript</h1>
+    <div id="canvas-container">
+        <canvas id="miCanvas" width="500" height="300">
+            Tu navegador no soporta canvas
+        </canvas>
+    </div>
+</body>
+</html>
